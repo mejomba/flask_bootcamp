@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+	<h1>this is home page</h1>
+	<h2>this puppy pic</h2>
+	<img src="../static/image/puppy_pic.jpg", style="width: 500px;">
+	<h1>test template variable</h1>
+	<h1>string {{name}}</h1>
+	<h1>list {{name_list}}</h1>
+	<h1>dict {{name_dict}}</h1>
+	<h1>dict_key {{name_dict['name']}}</h1>
+{% endblock %}

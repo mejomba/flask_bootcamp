@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% if not u or not l or not d %}
+<ul>
+{% if not u %}
+	<li>باید از حروف بزرگ استفاده کنید</li>
+{% endif %}
+{% if not l %}
+	<li>باید از حروف کوچک استفاده کنید</li>
+{% endif %}
+{% if not d %}
+	<li>کاراکتر اخر باید عددی باشد</li>
+{% endif %}
+
+</ul>
+{% endif %}
+<form action="{{ url_for('thank_you') }}">
+	<label for="first">first name</label>
+	<input type="text" name="first">
+	<label for="last">last</label>
+	<input type="text" name="last">
+	<input type="submit" name="submit" value="submit form">
+</form>
+{% endblock content %}
